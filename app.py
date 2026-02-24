@@ -15,7 +15,7 @@ st.title("🌦️ Weather Data Analytics Platform")
 
 # ---------------- API KEY ----------------
 # IMPORTANT: Add API_KEY inside Streamlit Secrets when deploying
-API_KEY = "90619b9a0d5446eb87d121602262302"
+API_KEY = st.secrets["90619b9a0d5446eb87d121602262302"] if "API_KEY" in st.secrets else "90619b9a0d5446eb87d121602262302"
 
 # ---------------- CITY INPUT ----------------
 city = st.text_input("Enter City Name", "Bhubaneswar")
