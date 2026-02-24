@@ -27,7 +27,7 @@ if st.button("Get Weather Data"):
     else:
 
         # -------- CURRENT WEATHER API --------
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={90619b9a0d5446eb87d121602262302}&units=metric"
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
         response = requests.get(url)
 
         if response.status_code == 200:
@@ -49,7 +49,7 @@ if st.button("Get Weather Data"):
             st.write(f"**Condition:** {weather_desc.title()}")
 
             # -------- 5 DAY FORECAST --------
-            forecast_url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={90619b9a0d5446eb87d121602262302}&units=metric"
+            forecast_url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}&units=metric"
             forecast_response = requests.get(forecast_url)
 
             if forecast_response.status_code == 200:
